@@ -1,11 +1,10 @@
-import os
 import sys
 sys.path.append(os.getcwd())
 
 from tft_numba_ltp import tft, tft_rc, sigma
 import numpy as np
 import matplotlib.pyplot as plt
-from utils import *
+from utils *
 import torch
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
@@ -40,8 +39,8 @@ transform = transforms.Compose([
             transforms.ToTensor(),
             transforms.Normalize((0,), (1,)),])
 
-mnist_train = datasets.MNIST(data_path, train=True, transform=transform)
-mnist_test = datasets.MNIST(data_path, train=False, transform=transform)
+mnist_train = datasets.MNIST(data_path, train=True, transforms=transforms)
+mnist_test = datasets.MNIST(data_path, train=False, transforms=transforms)
 
 # Create DataLoaders
 batch_size = 1
